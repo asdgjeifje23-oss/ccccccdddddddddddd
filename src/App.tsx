@@ -137,7 +137,7 @@ function App() {
             <>
               <SearchSection
                 students={rankedStudents}
-                onResult={handleSearchResult}
+                onSearch={handleSearchResult}
                 isDarkMode={isDarkMode}
               />
 
