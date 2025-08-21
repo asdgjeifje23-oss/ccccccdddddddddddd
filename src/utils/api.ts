@@ -197,12 +197,6 @@ export const searchRecitersWithCache = async (searchTerm: string): Promise<Recit
 // API للبحث عن النتائج
 export const searchResults = async (searchTerm: string): Promise<Result[]> => {
   try {
-    // التأكد من أن الاسم يحتوي على كلمتين على الأقل
-    const nameParts = searchTerm.trim().split(/\s+/);
-    if (nameParts.length < 2) {
-      throw new Error('يجب كتابة الاسم ثنائي على الأقل (الاسم الأول والثاني)');
-    }
-
     const { data, error } = await supabase
       .from('reciterResults')
       .select('*')

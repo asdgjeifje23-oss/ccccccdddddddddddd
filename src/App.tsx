@@ -136,7 +136,7 @@ function App() {
           {currentPage === "results" && (
             <>
               <SearchSection
-                students={rankedStudents}
+                students={[]}
                 onSearch={handleSearchResult}
                 isDarkMode={isDarkMode}
               />
@@ -197,7 +197,7 @@ function App() {
                                 isDarkMode ? "text-orange-200" : "text-orange-800"
                               }`}
                             >
-                              المسابقة لم تبدأ بعد
+                              لم يتم العثور على النتيجة
                             </h3>
 
                             <div
@@ -214,7 +214,7 @@ function App() {
                                     : "text-orange-700"
                                 }`}
                               >
-                                نتائج المسابقة ستكون متاحة فور انتهاء التصحيح
+                                تأكد من كتابة الاسم بشكل صحيح أو قد تكون النتائج لم تُنشر بعد
                               </p>
                               <p
                                 className={`font-semibold ${
@@ -223,7 +223,7 @@ function App() {
                                     : "text-orange-600"
                                 }`}
                               >
-                                ترقبوا بدء المسابقة قريباً إن شاء الله
+                                جرب البحث مرة أخرى أو تواصل مع إدارة المسابقة
                               </p>
                             </div>
 
@@ -249,7 +249,7 @@ function App() {
                                       : "text-amber-800"
                                   }`}
                                 >
-                                  ترقبوا بدء المسابقة قريباً إن شاء الله
+                                  النتائج متاحة للطلاب المشاركين فقط
                                 </span>
                               </div>
                             </div>
@@ -263,7 +263,7 @@ function App() {
 
               <StatsSection stats={stats} isDarkMode={isDarkMode} />
               <AllResultsSection
-                students={rankedStudents}
+                students={[]}
                 isDarkMode={isDarkMode}
               />
             </>
